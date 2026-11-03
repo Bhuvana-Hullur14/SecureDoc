@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - SecureDoc</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- HEADER -->
+
+        <header class="dashboard-header">
+
+            <div>
+                <h1>🔐 SecureDoc</h1>
+            </div>
+
+           <button id="logoutBtn" type="button">
+    Logout
+</button>
+
+        </header>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="dashboard-content">
+
+            <!-- WELCOME -->
+
+            <section class="welcome">
+
+                <h2>
+                    Welcome, <span id="userName">Student</span> 👋
+                </h2>
+
+                <p>
+                    Securely manage your academic documents
+                    using cloud storage.
+                </p>
+
+            </section>
+
+
+            <!-- STATISTICS -->
+
+            <section class="stats">
+
+                <div class="stat-card">
+
+                    <h3>Documents</h3>
+
+                    <p id="documentCount">0</p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <h3>Storage Used</h3>
+
+                    <p id="storageUsed">0 MB</p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <h3>Activities</h3>
+
+                    <p id="activityCount">0</p>
+
+                </div>
+
+            </section>
+
+
+            <!-- UPLOAD DOCUMENT -->
+
+            <section class="upload-section">
+
+                <h2>Upload Document</h2>
+
+                <input
+                    type="file"
+                    id="documentFile"
+                    accept=".pdf,.jpg,.jpeg,.png"
+                >
+
+                <br><br>
+
+                <select id="documentType">
+
+                    <option value="">
+                        Select Document Type
+                    </option>
+
+                    <option value="Certificate">
+                        Certificate
+                    </option>
+
+                    <option value="Resume">
+                        Resume
+                    </option>
+
+                    <option value="ID Document">
+                        ID Document
+                    </option>
+
+                    <option value="Internship Certificate">
+                        Internship Certificate
+                    </option>
+
+                    <option value="Academic Document">
+                        Academic Document
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+                <br><br>
+
+                <button id="uploadBtn" type="button">
+    Upload Document
+</button>
+                <p id="uploadMessage"></p>
+
+            </section>
+
+
+ <section class="statistics-section">
+    <h2>Document Statistics</h2>
+
+    <div class="statistics-grid">
+
+        <div class="stat-box">
+            <span>📜</span>
+            <h3 id="certificateCount">0</h3>
+            <p>Certificates</p>
+        </div>
+
+        <div class="stat-box">
+            <span>📄</span>
+            <h3 id="resumeCount">0</h3>
+            <p>Resumes</p>
+        </div>
+
+        <div class="stat-box">
+            <span>🪪</span>
+            <h3 id="idCount">0</h3>
+            <p>ID Documents</p>
+        </div>
+
+        <div class="stat-box">
+            <span>🎓</span>
+            <h3 id="academicCount">0</h3>
+            <p>Academic Documents</p>
+        </div>
+
+    </div>
+</section>           <!-- MY DOCUMENTS -->
+<section class="documents-section">
+
+    <h2>My Documents</h2>
+
+    <!-- Search and Filter -->
+
+    <div class="document-controls">
+
+        <input
+            type="text"
+            id="searchDocument"
+            placeholder="🔎 Search documents..."
+        >
+
+        <select id="filterDocument">
+
+            <option value="All">
+                All Documents
+            </option>
+
+            <option value="Certificate">
+                Certificate
+            </option>
+
+            <option value="Resume">
+                Resume
+            </option>
+
+            <option value="ID Document">
+                ID Document
+            </option>
+
+            <option value="Internship Certificate">
+                Internship Certificate
+            </option>
+
+            <option value="Academic Document">
+                Academic Document
+            </option>
+
+            <option value="Other">
+                Other
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- Documents List -->
+
+    <div id="documentsList">
+
+        <p class="empty-message">
+            No documents uploaded yet.
+        </p>
+
+    </div>
+
+</section>
+                    <p class="empty-message">
+                        No documents uploaded yet.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- RECENT ACTIVITY -->
+
+            <section class="activity-section">
+
+                <h2>Recent Activity</h2>
+
+                <div id="activityList">
+
+                    <p class="empty-message">
+                        No activity yet.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- DASHBOARD JAVASCRIPT -->
+
+    <script type="module" src="js/dashboard.js"></script>
+
+</body>
+
+</html>
+
